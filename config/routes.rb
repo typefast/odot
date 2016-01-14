@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get '/login' => "user_sessions#new", as: :login
   resources :users
-  resources :user_sessions, only: [:new, :create]
+  resources :user_sessions, only: [:new, :create, :destroy]
   resources :password_resets, only: [:new, :create, :edit, :update]
   
   resources :todo_lists do 
